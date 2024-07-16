@@ -54,7 +54,7 @@ def generate_image(tool_input, cat):
     The input is the user's requested image.
     """
 
-    settings = cat.mad_hatter.plugins["meow_art"].load_settings()
+    settings = cat.mad_hatter.get_plugin().load_settings()
 
     if settings == {}:
         log.error("No configuration found for MeowArt")
